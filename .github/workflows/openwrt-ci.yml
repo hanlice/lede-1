@@ -166,7 +166,7 @@ jobs:
           make defconfig
       - name: Make download
         run: |
-          make download -j8
+          make download -j1
           find ./dl/ -size -1024c -exec rm -f {} \;
       - name: Compile firmware
         run: DEBIAN_FRONTEND=noninteractive make -j$(nproc) V=s
